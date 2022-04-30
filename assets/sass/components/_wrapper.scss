@@ -1,0 +1,13 @@
+
+// .......... COMPONENTS .........//
+
+@use "./variables" as *;
+@use "./extend" as *;
+@use "./mixin" as *;
+@use "./colors" as *;
+
+// .......... COMPONENTS .........//
+
+.wrapper{
+    @include grid(12,12);
+}

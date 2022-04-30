@@ -1,0 +1,49 @@
+
+@use "./variables" as *;
+
+
+// DISPLAY
+
+@mixin flex($justify:center, $align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid ($columns:12, $rows:12, $rows-size:1fr) {
+    display: grid;
+    grid-template-columns: repeat($columns,1fr);
+    grid-template-rows: repeat($rows, $rows-size);
+}
+
+@mixin grid-position ($column, $row) {
+    grid-column: $column;
+    grid-row: $row;
+}
+
+// SHAPE
+
+@mixin body ($width:1rem, $height:1rem) {
+    width: $width;
+    height: $height;
+}
+
+@mixin border ($border: solid 1px, $radius:calc(1rem / 2)) {
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin box-shadow ($shadowx:$ref, $shadowy:$ref, $blur:$ref) {
+    box-shadow: $shadowx $shadowy $blur, $shadowx $shadowy $blur;
+}
+
+@mixin shadow ($shadowx:$ref, $shadowy:$ref, $blur:$ref) {
+    box-shadow: $shadowx $shadowy $blur;
+}
+
+// FONTS
+
+@mixin fonts ($size:inherit, $weigth:inherit) {
+    font-size: $size;
+    font-weight: $weigth;
+}

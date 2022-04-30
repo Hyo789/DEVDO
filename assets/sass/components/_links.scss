@@ -1,0 +1,26 @@
+
+// .......... COMPONENTS .........//
+
+@use "./variables" as *;
+@use "./extend" as *;
+@use "./mixin" as *;
+@use "./colors" as *;
+
+// .......... COMPONENTS .........//
+
+
+a{
+    display: inline-block;
+    color: $secondary-first;
+    
+    text-decoration: none;
+
+    transition: color 0.3s;
+    
+    &:hover{
+        color: $secondary-therd;
+        filter: contrast(1.2);
+
+        transition:color 0.3s;
+    }
+}

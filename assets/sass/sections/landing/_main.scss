@@ -1,0 +1,212 @@
+
+// .......... COMPONENTS .........//
+
+@use "../../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+
+// MAIN
+
+.main-landing{
+
+    @include grid (12, 12, 55px);
+    
+    .wrapper {
+
+    @include grid-position(3 / span 8, 3 / span 8);
+
+    @include border(none,$radius:calc($ref * 1.5));
+
+    background: rgba($primary-first, 0.9);
+
+    box-shadow: $ref $ref $ref rgba($secondary-first,0.5);
+    
+    &::before{
+        content: "";
+
+        @extend %after-befor;
+        z-index: -2;
+
+        transform: rotate(-5deg);
+        background-color: rgba($primary-therd,1);
+    }
+
+    &::after{
+        content: "";
+
+        @extend %after-befor;
+        z-index: -1;
+
+        transform: rotate(5deg);
+        background-color: rgba($secondary-second,1);
+    }
+
+// ACCUEIL ILLUSTRATION
+
+    .landing_illustrations{
+        @include grid-position (1 / span 6, 1 / span 12);
+
+        @include flex();
+
+        position: relative;
+
+        .illustrations{
+            position: absolute;
+
+            visibility: hidden;
+            opacity: 0;
+
+            transition: all 2s;
+        }
+
+        // IMAGE ACTIVE Javscript
+
+        .landing-img-active{
+            visibility: visible;
+            opacity: 1;
+
+            transition: all 3s 2.5s;
+        }
+    }
+
+// ACCUEIL ARTICLE
+
+    .landing_article{
+        @include grid-position (7 / sapn 12, 1 / sapn 12);
+
+        @include flex($justify:space-evenly);
+        flex-direction: column;
+
+        h3{
+            font-family: 'Permanent Marker', cursive;
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
+
+            &::after{
+                content: " !";
+                @include fonts();
+            }
+        }
+
+        p{
+            max-width: 80%;
+            margin: 0 auto;
+            padding:calc($ref) 0 ;
+            
+            font-weight: 600;
+            color: $secondary-second;
+
+            text-align: center;
+            line-height:1.6rem;
+        }
+
+
+// COUNTER
+
+        .counter{
+            @include flex();
+            gap: 1.5rem;
+
+            div{
+                @include body(calc($ref * 9), calc($ref * 9));
+                @include border(none, calc($ref * 1.5));
+
+                @include flex();
+                flex-direction: column;
+
+                background-color: $white;
+                color: $secondary-first;
+
+                font-family: 'Permanent Marker', cursive;
+                font-size: 2rem;
+
+                h5{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+
+// FORMULAIRE
+
+        form{
+            @include flex();
+            flex-direction: column;
+            gap: calc($ref * 2);
+
+            div{
+                @include flex();
+                flex-direction: column;
+
+                #nwes{
+                    @include border($border:none);
+                    @include fonts (medium, 600);
+
+                    padding: calc($ref) calc($ref * 6);
+                }
+            }
+
+            input[type = submit]{
+                padding:calc($ref - 5px) calc($ref * 2.5) ;
+                background-color: $secondary-therd;
+            };
+        }
+    }
+
+    }
+
+}
+
+
+// BTN ENTRER
+
+.landing-btn-entrer{
+
+    @include grid-position(11 / span 1, 12 / span 1);
+    @include flex(flex-end, center);
+
+    .btn-entrer{
+        font-size: 1.2rem;
+        
+        padding: calc($ref * 1) calc($ref *1.5);
+
+        background-color: $primary-first;
+    }
+}
+
+
+     
+@media screen and (max-width:320px) {
+
+    .main-landing{
+
+        .wrapper {
+
+            .landing_article {
+
+                // COUNTER
+                
+                .counter{
+                    @include flex();
+                    gap: 1rem;
+                
+                    div{
+                        @include body(calc($ref * 5), calc($ref * 5));
+                        @include border(none, calc($ref * 1.5));
+                
+                        font-size: 0.5rem;
+                
+                        h5{
+                            font-size: 0.5rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    }

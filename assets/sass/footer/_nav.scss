@@ -1,0 +1,22 @@
+
+// .......... COMPONENTS .........//
+
+@use "../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+.footer_nav {
+    @include flex (space-around, center);
+    
+    .footer_nav_list {
+        @include flex (space-around, center);
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    @media screen and (max-width:320px) {
+        .footer_nav_list {
+            gap: 0.5rem;
+        }
+    }
+}

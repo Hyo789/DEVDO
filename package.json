@@ -1,0 +1,19 @@
+{
+  "name": "devdo-2.0",
+  "version": "1.0.0",
+  "description": "Mon site web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass assets/sass/style.scss assets/css/style.css -w --style=compressed"
+  },
+  "keywords": [
+    "2.0"
+  ],
+  "author": "HyoSayajin",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.8.1",
+    "sass": "^1.51.0"
+  }
+}

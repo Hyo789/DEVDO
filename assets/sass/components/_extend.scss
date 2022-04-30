@@ -1,0 +1,19 @@
+
+// .......... COMPONENTS .........//
+
+@use "./variables" as *;
+@use "./mixin" as *;
+@use "./colors" as *;
+
+// .......... COMPONENTS .........//
+
+// MAIN AFTER BEFOR
+
+%after-befor{
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 12;
+
+    @include border(none,$radius:calc($ref * 1.5));
+
+    box-shadow: $ref $ref $ref rgba($secondary-first,0.5);
+}

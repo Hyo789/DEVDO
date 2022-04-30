@@ -1,0 +1,62 @@
+    
+// .......... COMPONENTS .........//
+
+@use "../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+    
+.container_logo{
+
+    text-transform: capitalize;
+    
+    // LOGO
+    
+    @include flex ($justify:flex-start);
+    gap: calc($ref * 2);
+    
+    width: 25%;
+    
+    .logo{
+        @include flex();
+        
+        margin-left:1rem ;
+        
+        img{
+            @include body(calc($ref * 6), calc($ref * 6));
+        }
+    }
+    
+    // TITLE
+    
+    .devdo{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 1.5rem; font-weight: 500;
+
+        &::first-letter{
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .container_logo {
+
+        width: initial;
+        
+        gap: 1rem;
+
+        .logo {
+            margin-left: 0.5rem;
+            
+            img{
+                @include body(calc($ref * 4), calc($ref * 4));
+            }
+        }
+
+        .devdo {
+            font-size: 1rem;
+        }
+    }
+}

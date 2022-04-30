@@ -1,0 +1,14 @@
+
+// .......... COMPONENTS .........//
+
+@use "../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+.media_sociaux {
+    @include flex (space-around, center);
+    gap: 1rem;
+    .bi {
+        font-size: 1.5rem;
+    }
+}

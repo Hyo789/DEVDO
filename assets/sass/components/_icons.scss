@@ -1,0 +1,13 @@
+
+// .......... COMPONENTS .........//
+
+@use "./variables" as *;
+@use "./extend" as *;
+@use "./mixin" as *;
+@use "./colors" as *;
+
+// .......... COMPONENTS .........//
+
+.bi {
+    font-size: 1.5rem;
+}

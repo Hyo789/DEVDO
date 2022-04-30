@@ -1,0 +1,55 @@
+    
+// .......... COMPONENTS .........//
+
+@use "../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+
+// NAVIGATION
+    
+.header_nav{
+    width: 70%;
+    @include flex();
+    
+    .header_nav_list{
+        width: 100% ;
+        @include flex($justify:flex-end); gap: 2rem;
+
+        .list_items{
+            font-family: 'Permanent Marker', cursive;
+            @include fonts (1.1rem, 600);
+            
+            letter-spacing: 1px;
+
+            a:hover {
+                color: rgba($secondary-second, 1);
+            }
+            
+            .active_link{
+                color: rgba($primary-second, 0.8);
+                transition: 0.3s 0.3s;
+            }
+        }
+    }
+}
+
+    
+@media screen and (max-width:320px) {
+
+    .header_nav {
+        display: none;
+        position: absolute; top: 15%; right: 0; bottom: 0;
+        max-width: 55%;
+        @include border ();
+
+        .bi {
+            position: absolute; top: 5px; right: 5px;
+            font-size: 2rem;
+        }
+
+        .header_nav_list {
+            flex-flow: column;
+        }
+    }
+}
