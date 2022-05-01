@@ -11,21 +11,26 @@
 .btn{
 
     @include border(none,$radius:calc($ref * 2.5));
-
+    
     font-family: 'Permanent Marker', cursive;
     font-weight: 600;
-
+    
     text-transform: uppercase;
     letter-spacing: calc($ref / 10);
-
+    
     cursor: pointer;
-
+    
     transition: all 0.3s;
+    
+    &:hover{
+        filter: brightness(1.1);
+        transform: scale(1.03);
+        
+        transition: 0.3s ease-in;
+    }
+    
+    @media screen and (min-width:1999.98px) and (min-height:925.98px) {
+            @include border(none,$radius:calc($ref * 4.5));
 
-        &:hover{
-            filter: brightness(1.1);
-            transform: scale(1.03);
-
-            transition: 0.3s ease-in;
         }
 }

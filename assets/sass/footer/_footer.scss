@@ -9,11 +9,12 @@
 .footer {
     @include flex (space-around, center);
     flex-wrap: wrap;
+    row-gap: 0.5rem;
 
     font-weight: 500;
     text-transform: capitalize;
 
-    padding: 2rem;
+    padding: 2rem 0;
     
     opacity: 0.6;
     
@@ -35,6 +36,21 @@
     
                 transition: 0.3s;
             }
+        }
+    }
+}
+
+
+@media screen and (max-width:768.98px) {
+
+    .footer {
+        flex-flow: column wrap;
+
+        .footer_contact {
+            padding: 0.5rem;
+        }
+        & :nth-child(4) {
+            padding: 0.5rem;
         }
     }
 }

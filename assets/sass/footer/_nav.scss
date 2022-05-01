@@ -11,12 +11,20 @@
     .footer_nav_list {
         @include flex (space-around, center);
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1rem;
     }
-    
-    @media screen and (max-width:320px) {
-        .footer_nav_list {
-            gap: 0.5rem;
+}
+
+
+@media screen and (max-width:768.98px) {
+
+    .footer {
+        .footer_nav {
+            .footer_nav_list {
+
+                padding: 0.5rem;
+                row-gap: 1rem;
+            }
         }
     }
 }

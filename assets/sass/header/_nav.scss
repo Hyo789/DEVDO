@@ -34,8 +34,10 @@
     }
 }
 
+// RESPOSIVE MEDIA
+
     
-@media screen and (max-width:320px) {
+@media screen and (max-width:768.98px) {
 
     .header_nav {
         display: none;
@@ -50,6 +52,24 @@
 
         .header_nav_list {
             flex-flow: column;
+        }
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024.98px) {
+    
+    .header_nav {
+        
+        .bi {
+            display: none;
+        }
+
+        .header_nav_list {
+
+            & :nth-child(6), & :nth-child(5) {
+
+                display: none;
+            }
         }
     }
 }

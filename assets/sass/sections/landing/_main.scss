@@ -54,8 +54,8 @@
         .illustrations{
             position: absolute;
 
-            visibility: hidden;
-            opacity: 0;
+            // visibility: hidden;
+            // opacity: 0;
 
             transition: all 2s;
         }
@@ -73,7 +73,7 @@
 // ACCUEIL ARTICLE
 
     .landing_article{
-        @include grid-position (7 / sapn 12, 1 / sapn 12);
+        @include grid-position (7 / sapn 6, 1 / sapn 12);
 
         @include flex($justify:space-evenly);
         flex-direction: column;
@@ -158,15 +158,14 @@
 
     }
 
-}
-
-
-// BTN ENTRER
+    // BTN ENTRER
 
 .landing-btn-entrer{
 
-    @include grid-position(11 / span 1, 12 / span 1);
-    @include flex(flex-end, center);
+    @include grid-position(1 / span 12, 11 / span 1);
+    @include flex();
+
+    transform: translateY(35%);
 
     .btn-entrer{
         font-size: 1.2rem;
@@ -177,36 +176,221 @@
     }
 }
 
+}
 
-     
-@media screen and (max-width:320px) {
+// RESPONSIVE MEDIA
+
+
+@media screen and (max-width:575.98px) {
 
     .main-landing{
 
         .wrapper {
+        @include grid-position(2 / span 10, 2 / span 9);
 
+            .landing_illustrations {
+                display: none;
+            }
+
+
+            .landing_article {
+                @include grid-position (1 / span 12, 1 / span 12);
+                font-size: 1rem;
+
+                h3{
+                    font-size: 2rem;
+                }
+
+                // COUNTER
+                
+                .counter{
+                    gap: 1rem;
+                
+                    div{
+                        @include body(calc($ref * 5), calc($ref * 5));
+                        @include border(none, 4px);
+                
+                        font-size: 1rem;
+                
+                        h5{
+                            display: none;
+                        }
+                    }
+                }
+// FORMULAIRE
+
+                form{
+
+                    gap: 0.5rem;
+        
+                    div{
+        
+                        #nwes{
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+        
+            }
+            
+        }
+
+        // BTN ENTRER
+        
+        .landing-btn-entrer{
+        
+            .btn-entrer{
+                font-size: 1rem;
+                
+                padding: 0.5rem;
+
+            }
+        }
+    }
+
+    }
+
+@media screen and (min-width:576px) and (max-width:1400.98px) {
+
+    .main-landing{
+
+        .wrapper {
+            @include grid-position(2 / span 10, 2 / span 9);
+
+            .landing_illustrations {
+                display: none;
+            }
+
+
+            .landing_article {
+                @include grid-position (1 / span 12, 1 / span 12);
+                font-size: 1rem;
+
+                h3{
+                    font-size: 2rem;
+                }
+
+                // COUNTER
+                
+                .counter{
+                    @include flex();
+                    gap: 1.5rem;
+                
+                    div{
+
+                        @include border(none, 12px);
+                
+                        font-size: 1rem;
+                
+                        h5{
+                            display: none;
+                        }
+                    }
+                }
+// FORMULAIRE
+
+                form{
+
+                    gap: 0.5rem;
+        
+                    div{
+
+                        #nwes{
+        
+                            padding: 0.5rem;
+                        }
+                    }
+
+                }
+
+            }
+            
+        }
+
+        // BTN ENTRER
+        
+        .landing-btn-entrer{
+        
+            .btn-entrer{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    }
+
+
+@media screen and (min-width:1024px) and (max-width:1400.98px) {
+        .main-landing{
+                .wrapper {
+                    @include grid-position(3 / span 8, 3 / span 8);
+            }
+
+        }
+    }
+
+// HEIGHT RESPONSIVE MEDIA
+
+@media screen and (min-width:767.98px) and (min-height:824.98px) {
+    .main-landing {
+        @include grid (12, 12, 70px);
+        // padding: 5% 0;
+    }
+}
+
+@media screen and (min-width:767.98px) and (min-height:925.98px) {
+    .main-landing {
+        @include grid (12, 12, 80px);
+        padding-bottom: 5% ;
+    }
+}
+
+@media screen and (min-width:767.98px) and (min-height:1300.98px) {
+    .main-landing {
+        // @include grid (12, 12, 100px);
+        padding: 15% 0;
+    }
+}
+
+// 4K RESPONSIVE MEDIA
+
+@media screen and (min-width:1999.98px) and (min-height:925.98px) {
+    .main-landing {
+        @include grid (12, 12, 100px);
+        padding-bottom: 5% ;
+
+        .wrapper {
+            
             .landing_article {
 
                 // COUNTER
                 
                 .counter{
                     @include flex();
-                    gap: 1rem;
+                    gap: 1.5rem;
                 
                     div{
-                        @include body(calc($ref * 5), calc($ref * 5));
-                        @include border(none, calc($ref * 1.5));
+                        @include body(calc($ref * 12), calc($ref * 12));
+                        @include border(none, 16px);
                 
-                        font-size: 0.5rem;
+                        font-size: 2.5rem;
                 
                         h5{
-                            font-size: 0.5rem;
+                            font-size: 1.5rem;
                         }
                     }
                 }
             }
-            
         }
-    }
+
+        .landing-btn-entrer{
+
+            .btn-entrer{
+                font-size: 1.8rem;
+                
+                padding: calc($ref * 2) calc($ref *2.5);
+            }
+        }
 
     }
+}
