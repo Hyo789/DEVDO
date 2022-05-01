@@ -9,8 +9,11 @@
 // MAIN
 
 .main-landing{
-
     @include grid (12, 12, 55px);
+    
+    opacity: 0;
+
+    transition: 0.4s;
     
     .wrapper {
 
@@ -54,8 +57,8 @@
         .illustrations{
             position: absolute;
 
-            // visibility: hidden;
-            // opacity: 0;
+            visibility: hidden;
+            opacity: 0;
 
             transition: all 2s;
         }
@@ -280,7 +283,7 @@
 
                         @include border(none, 12px);
                 
-                        font-size: 1rem;
+                        font-size: 2rem;
                 
                         h5{
                             display: none;
@@ -332,9 +335,24 @@
 // HEIGHT RESPONSIVE MEDIA
 
 @media screen and (min-width:767.98px) and (min-height:824.98px) {
+
     .main-landing {
+
         @include grid (12, 12, 70px);
         // padding: 5% 0;
+
+        .wrapper {
+
+            .landing_article {
+
+                .counter{
+
+                    div{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
     }
 }
 
