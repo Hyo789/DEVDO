@@ -81,7 +81,7 @@
         @include flex($justify:space-evenly);
         flex-direction: column;
 
-        h3{
+        h6{
             font-family: 'Permanent Marker', cursive;
             font-size: 3rem;
             font-weight: 500;
@@ -194,7 +194,6 @@
             .landing_illustrations {
                 display: none;
             }
-
 
             .landing_article {
                 @include grid-position (1 / span 12, 1 / span 12);
