@@ -11,10 +11,6 @@
 .main-landing{
     @include grid (12, 12, 55px);
     
-    opacity: 0;
-
-    transition: 0.4s;
-    
     .wrapper {
 
     @include grid-position(3 / span 8, 3 / span 8);

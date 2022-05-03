@@ -1,12 +1,23 @@
 // LANDING FUNCTION
 
+// const { Value } = require("sass");
+
 window.addEventListener("load", function (event) {
-
-// .......... ACCUEIL ILLUSTRATION .......... //
-
+    
+    this.setTimeout(function () {
+        document.querySelector("#container_loader").classList.add("disactive");
+        
+        this.setTimeout(function () {
+            document.querySelector("#container_loader").style.display= "none";
+        },2000)
+    },500);
+    
+    // .......... ACCUEIL ILLUSTRATION .......... //
+    
     (function () {
         
         if (window.matchMedia("(max-width: 1400px)").matches) {
+            console.log("Cest ok pour moi");
             return false
         } else {
             
@@ -88,8 +99,6 @@ window.addEventListener("load", function (event) {
             } else {
                 btnEntrer.href = "#";
             }
-        
-            document.querySelector("#main-landing").style.opacity = "1";
         
         }, 1000)
 
