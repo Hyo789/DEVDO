@@ -8,11 +8,16 @@
 
 // .......... COMPONENTS .........//
 
+.container_accueil-btn-entrer{
+    z-index: 100;
+}
+
 .btn{
 
     @include border(none,$radius:calc($ref * 2.5));
     
     font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
     font-weight: 600;
     
     text-transform: uppercase;

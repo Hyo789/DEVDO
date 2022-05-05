@@ -167,10 +167,8 @@
     transform: translateY(35%);
 
     .btn-entrer{
-        font-size: 1.2rem;
-        
         padding: calc($ref * 1) calc($ref *1.5);
-
+        
         background-color: $primary-first;
     }
 }

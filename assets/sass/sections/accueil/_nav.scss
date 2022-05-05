@@ -1,0 +1,41 @@
+
+// .......... COMPONENTS .........//
+
+@use "../../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+
+.accueil_nav{
+    @include grid-position (1 / span 12, 11 / span 1);
+    
+    
+    // margin-bottom: calc($ref *2);
+    
+    .accueil_nav_list{
+        @include flex ();
+        gap: 1rem;
+        @include fonts (calc(1rem), 500);
+
+        // font-family: 'Permanent Marker', cursive;
+
+        font-style: italic;
+
+        letter-spacing: 1px;
+
+        color: $secondary-first;
+
+        filter: contrast(1.2);
+
+        transition: 0.3s;
+    }
+    // EVENT JavaScript
+    
+    .option-active{
+        z-index: 2;
+        background-color: rgba($primary-first,0.8);
+        color: rgba($secondary-second, 0.9);
+        transform: scale(1.1);
+    }
+
+}

@@ -15,10 +15,10 @@
 
 @use "./header/header-stak";
 
+// .......... SECTIONS .........//
+
+@use "./sections/sections-stak";
+
 // .......... FOOTER .........//
 
 @use "./footer/footer-stak";
-
-// .......... LANDING .........//
-
-@use "./sections/landing/landing-stak.scss";

@@ -1,7 +1,5 @@
 // LANDING FUNCTION
 
-// const { Value } = require("sass");
-
 window.addEventListener("load", function (event) {
     
     this.setTimeout(function () {
@@ -105,7 +103,3 @@ window.addEventListener("load", function (event) {
     })();
 
 })
-
-
-
-
