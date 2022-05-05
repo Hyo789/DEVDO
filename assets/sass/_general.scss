@@ -8,6 +8,23 @@
 
 /* .......... STYLESHEET .......... */
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 5px 5px 5px silver;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: $primary-first;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $primary-second;
+}
+
 
 *{box-sizing: border-box;}
 
