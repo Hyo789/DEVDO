@@ -143,23 +143,33 @@
             <i class="bi bi-caret-left-square-fill"></i>
         </div>
 
-    <nav id="accueil_nav" class="accueil_nav">
+    <nav id="accueil-nav" class="accueil_nav">
 
         <ul class="accueil_nav_list">
 
-            <li class="accueil_nav_li">about</li>
+            <li class="accueil_nav_li default_bully">
+                <a href="#about">a</a>
+            </li>
 
-            <li class="accueil_nav_li">creations</li>
+            <li class="accueil_nav_li">
+                <a href="#creations">c</a>
+            </li>
 
-            <li class="accueil_nav_li">travaux</li>
+            <li class="accueil_nav_li">
+                <a href="#travaux">t</a>
+            </li>
 
-            <li class="accueil_nav_li">ressources</li>
+            <li class="accueil_nav_li">
+                <a href="#ressources">r</a>
+            </li>
 
         </ul>
 
     </nav>
 
-    <section id="default_section" class="default_section section-active"> 
+    <div id="container-sections" class="container_sections">
+        
+    <section id="default-section" class="default_section section_active"> 
         <h2>Bienvenu !</h2>
 
         <div class="accueil_section_container_img">
@@ -175,7 +185,7 @@
 
     </section> 
 
-    <section class="accueil_sections accueil_section_about">
+    <section id="about" class="accueil_sections accueil_section_about">
 
         <h2>About</h2>
 
@@ -194,7 +204,7 @@
 
     </section>
 
-    <section class="accueil_sections accueil_section_creations"> 
+    <section id="creations" class="accueil_sections accueil_section_creations"> 
         <h2>Creations</h2>
 
         <div class="accueil_section_container_img">
@@ -210,7 +220,7 @@
 
     </section>
 
-    <section class="accueil_sections accueil_section_travaux">
+    <section id="travaux" class="accueil_sections accueil_section_travaux">
         <h2>Travaux</h2>
 
         <div class="accueil_section_container_img">
@@ -226,7 +236,7 @@
 
     </section>
 
-    <section class="accueil_sections accueil_section_ressources">
+    <section id="ressources" class="accueil_sections accueil_section_ressources">
         <h2>Ressources</h2>
 
         <div class="accueil_section_container_img">
@@ -240,6 +250,8 @@
             </p>
         </article>
     </section> 
+
+    </div>
     
             <div id="container_accueil-btn-entrer" class="container_accueil-btn-entrer">
                 <a class="btn btn-entrer" id="btn-entrer" href="#" >entrer</a>

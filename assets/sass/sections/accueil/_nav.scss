@@ -9,32 +9,37 @@
 .accueil_nav{
     @include grid-position (1 / span 12, 11 / span 1);
     
-    
-    // margin-bottom: calc($ref *2);
-    
     .accueil_nav_list{
         @include flex ();
         gap: 1rem;
-        @include fonts (calc(1rem), 500);
 
-        // font-family: 'Permanent Marker', cursive;
+        .accueil_nav_li {
 
-        font-style: italic;
+            @include flex ();
+            @include body (0.5rem, 0.5rem);
+            @include border (solid 2px rgba($primary-first,1), 50%);
+            padding: 0.5rem;
 
-        letter-spacing: 1px;
+            transition: 0.3s;
+            
+            &:hover {
+                background-color: rgba($primary-second,0.9);
 
-        color: $secondary-first;
+                transition: 0.3s;
+            }
 
-        filter: contrast(1.2);
+            a {
+                opacity: 0;
+            }
 
-        transition: 0.3s;
+        }
     }
     // EVENT JavaScript
     
-    .option-active{
-        z-index: 2;
+    .bully-active{
+        // z-index: 2;
         background-color: rgba($primary-first,0.8);
-        color: rgba($secondary-second, 0.9);
+        // color: rgba($secondary-second, 0.9);
         transform: scale(1.1);
     }
 

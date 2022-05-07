@@ -5,80 +5,83 @@
 
 // .......... COMPONENTS .........//
 
-
-.accueil_sections, .default_section{
-    z-index: 10;
-
+.container_sections {
     @include grid-position(1 / span 12, 1 / span 12);
     @include grid(12, 12);
 
-    text-align: center;
-
-    visibility: hidden;
-    opacity: 0;
-
-    transition: 0.5s;
+    .accueil_sections, .default_section{
     
-    h2{
-        @include grid-position(3 / span 2, 2 / span 1);
-
-        font-family: 'Permanent Marker', cursive;
-
-        font-size: calc(1rem *1.5);
-
-        text-transform: capitalize;
-    }
+        @include grid-position(1 / span 12, 1 / span 12);
+        @include grid(12, 12);
     
-    .accueil_section_container_img{
-        @include grid-position(3 / span 2, 5 / span 3);
-        @include flex();
-
-        img{
-            transform: scale(2.5)
-        }
-    }
+        text-align: center;
     
-    .accueil_section_article{
-        @include grid-position(8 / span 4, 3 / span 8);
-        @include flex ();
-        flex-direction: column;
-        gap: calc($ref * 3);
-
-        h5{
-            text-align: center;
+        visibility: hidden;
+        opacity: 0;
+    
+        transition: 0.5s;
+        
+        h2{
+            @include grid-position(3 / span 2, 2 / span 1);
+    
+            font-family: 'Permanent Marker', cursive;
+    
+            font-size: calc(1rem *1.5);
+    
+            text-transform: capitalize;
         }
-
-        p{
-            max-width: 80%;
-            min-height: 80%;
-            margin: $ref auto ;
-
-            line-height: calc($ref * 2.5);
+        
+        .accueil_section_container_img{
+            @include grid-position(3 / span 2, 5 / span 3);
+            @include flex();
+    
+            img{
+                transform: scale(2.5)
+            }
         }
+        
+        .accueil_section_article{
+            @include grid-position(8 / span 4, 3 / span 8);
+            @include flex ();
+            flex-direction: column;
+            gap: calc($ref * 3);
+    
+            h5{
+                text-align: center;
+            }
+    
+            p{
+                max-width: 80%;
+                min-height: 80%;
+                margin: $ref auto ;
+    
+                line-height: calc($ref * 2.5);
+            }
+        }
+    
     }
 
+    // EVENT JavaScript
+    
+    .section_active{
+        visibility: visible;
+        opacity: 1;
+    
+        transition: 0.7s;
+    }
 }
 
-// EVENT JavaScript
-
-.section-active{
-    z-index: 15;
-
-    visibility: visible;
-    opacity: 1;
-
-    transition: 0.7s;
-}
 
 
 // BTN
 
 
 .btn_suivant, .btn_precedant {
-    z-index: 20;
+    z-index: 5;
 
     .bi {
         font-size: 2rem;
+        color: $primary-first;
 
         transition: 0.3s;
         
