@@ -108,9 +108,16 @@ window.addEventListener("load", function (event) {
 
     })();
 
-}) 
+});
 
 // ACCUEIL FUNCTION
+
+(function () {
+let accueil = document.querySelector("#accueil");
+
+if (accueil === null || undefined) {
+    return false
+}
 
 // BTN NEXT PREVIOUS
 
@@ -234,3 +241,40 @@ for (let i = 0; i < bullys.length; i++) {
         
     } )
 }
+
+}) ();
+
+// ABOUT FUNCTIONS
+
+(function () {
+
+let about = document.querySelector("#about")
+if (about == null || undefined) {
+    return false
+}
+    
+let main = document.querySelector("#main-about")
+let onglets = document.querySelectorAll("#select li");
+
+for (let i = 0; i < onglets.length; i++) {
+
+    onglets[i].addEventListener("click", function (event) {
+
+        let ongletActive = onglets[i].parentNode.querySelector(".onglets-list-active");
+        let page = main.querySelector(onglets[i].querySelector("a").getAttribute("href"));
+        let pageActive = main.querySelector(".onglet-active");
+
+        if (this.classList.contains("onglets-list-active")) {
+            return false
+        } else {
+            pageActive.classList.remove("onglet-active");
+            page.classList.add("onglet-active")
+
+            ongletActive.classList.remove("onglets-list-active");
+            this.classList.add("onglets-list-active");
+        }
+
+    })
+};
+
+}) ();

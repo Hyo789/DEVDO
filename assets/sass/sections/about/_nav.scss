@@ -1,0 +1,40 @@
+
+// .......... COMPONENTS .........//
+
+@use "../../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+.about_onglets_list{
+
+    @include grid-position (1 / span 6, 1 / span 1);
+    @include flex (flex-start, stretch);  
+    @include fonts (1.1rem, 900);  
+    
+    // Even Javascript
+    .onglets-list-active{
+        transform: scale(1.02);
+        background-color: rgba($primary-first, 0.9);
+        box-shadow:silver -2px -1px 8px;
+
+        a{
+            color: rgba($secondary-therd, 0.7);
+        }
+    }
+
+    li{
+        @include flex ($align:stretch);
+        @include border ($radius:calc($ref / 2));
+        box-shadow: 0px 2px 4px;
+        border-bottom: none; border-left: none;
+        padding: 0 $ref;
+        
+        &:hover{
+            background-color: rgba($primary-first, 0.8);
+        }
+        
+        a{
+            @include flex ();
+        }
+    }
+}

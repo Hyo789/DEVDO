@@ -1,0 +1,53 @@
+
+// .......... COMPONENTS .........//
+
+@use "../../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+.about_onglets{
+    @include grid-position (1 / span 12, 2 / span 10);
+    @include flex ();
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.5s;
+    
+    article{
+        @include flex ();
+        max-width: 90%;
+        min-height: 90%;
+        margin: auto;
+
+        // Paragraphe
+
+        p{
+            max-width: 45%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        // Container de l'illustration de l'article
+
+        .container_aboutIllustration{
+            @include flex ();
+            // @include border (inset 5px , $ref * 5);
+            max-width: 45%;
+            width: 90%;
+
+            // Illustation de l'article
+
+            .aboutIllustrations{
+                transform: scale(1.4);
+            }
+        }
+    }
+}
+
+.onglet-active{
+    visibility: visible;
+    opacity: 1;
+
+    transition: 0.7s;
+}

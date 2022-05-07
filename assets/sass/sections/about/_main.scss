@@ -1,0 +1,25 @@
+
+// .......... COMPONENTS .........//
+
+@use "../../components/index" as *;
+
+// .......... COMPONENTS .........//
+
+.main-about{
+    @include grid(12, 12,45px);
+    padding: 1.6rem 0.5rem;
+    
+    &::before {
+        
+        @include grid-position(1 / span 7, 2 / span 1);
+        @include border (none, 4px);
+        content: " ";
+        background-color: $primary-first;
+        height: 4px;
+        margin-top: 2px;
+        opacity: 0.6;
+
+        animation: scrollRight 0.8s;
+
+    }
+}
