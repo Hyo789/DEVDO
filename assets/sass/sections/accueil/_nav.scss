@@ -32,15 +32,14 @@
                 opacity: 0;
             }
 
+
         }
     }
     // EVENT JavaScript
     
     .bully-active{
-        // z-index: 2;
         background-color: rgba($primary-first,0.8);
-        // color: rgba($secondary-second, 0.9);
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 
 }

@@ -20,7 +20,7 @@
     .logo{
         @include flex();
         
-        margin-left:1rem ;
+        margin-left:1rem;
         
         img{
             @include body(calc($ref * 6), calc($ref * 6));

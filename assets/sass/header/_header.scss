@@ -32,6 +32,11 @@
             }
         }
     }
+
+    .bi-list-nested {
+        padding-right: 1rem ;
+    }
+
 }
 
 // RESPOSIVE MEDIA
@@ -46,8 +51,11 @@
 @media screen and (min-width:769px) and (max-width:1023.98px) {
 
     .header {
+
+        justify-content: space-between;
+
         .bi {
-            padding-left: 1.5rem 0 ;
+            padding-right: 1rem ;
         }
     }
 }

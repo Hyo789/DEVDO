@@ -13,7 +13,7 @@
     @include flex();
     
     .header_nav_list{
-        width: 100% ;
+        width: 90% ;
         @include flex($justify:flex-end); gap: 2rem;
 
         .list_items{
@@ -34,6 +34,37 @@
     }
 }
 
+// NAV MOBILE EVENT JS
+
+.header_nav.nav-mobile {
+    position: absolute; top: 0; right: 0; bottom: 0; z-index: 100;
+    justify-content: flex-start;
+    flex-direction: column;
+    @include border (none,$radius:0.5rem 0 0 0.5rem);
+    max-width: 75%;
+
+    background-color: rgba($primary-first, 0.97);
+    filter: contrast(1.5);
+
+    opacity: 1; transition: 0.3s;
+
+    .bi {
+        display: block;
+        position: absolute; top: 5px; right: $ref;
+        font-size: 2.5rem;
+    }
+
+    
+    .header_nav_list {
+        flex-flow: column;
+        padding: 2rem ;
+
+        & :nth-child(6), & :nth-child(5) {
+            display: initial;
+        }
+    }
+}
+
 // RESPOSIVE MEDIA
 
     
@@ -41,18 +72,6 @@
 
     .header_nav {
         display: none;
-        position: absolute; top: 15%; right: 0; bottom: 0;
-        max-width: 55%;
-        @include border ();
-
-        .bi {
-            position: absolute; top: 5px; right: 5px;
-            font-size: 2rem;
-        }
-
-        .header_nav_list {
-            flex-flow: column;
-        }
     }
 }
 
@@ -65,9 +84,7 @@
         }
 
         .header_nav_list {
-
             & :nth-child(6), & :nth-child(5) {
-
                 display: none;
             }
         }
