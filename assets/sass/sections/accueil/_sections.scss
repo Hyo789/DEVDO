@@ -5,11 +5,11 @@
 
 // .......... COMPONENTS .........//
 
-.container_sections {
+.container_choice {
     @include grid-position(1 / span 12, 1 / span 12);
     @include grid(12, 12);
 
-    .accueil_sections, .default_section{
+    .choice_sections, .default_section{
     
         @include grid-position(1 / span 12, 1 / span 12);
         @include grid(12, 12);
@@ -31,7 +31,7 @@
             text-transform: capitalize;
         }
         
-        .accueil_section_container_img{
+        .choice_section_container_img{
             @include grid-position(3 / span 2, 5 / span 3);
             @include flex();
     
@@ -40,7 +40,7 @@
             }
         }
         
-        .accueil_section_article{
+        .choice_section_article{
             @include grid-position(8 / span 4, 3 / span 8);
             @include flex ();
             flex-direction: column;

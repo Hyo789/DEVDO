@@ -148,14 +148,14 @@ window.addEventListener("load", function (event) {
 (function () {
 let accueil = document.querySelector("#accueil");
 
-if (accueil === null || undefined) {
-    return false
-}
+// if (accueil === null || undefined) {
+//     return false
+// }
 
 // BTN NEXT PREVIOUS
 
 const defaultSection = document.querySelector("#default-section");
-const container = document.querySelector("#container-sections");
+const container = document.querySelector("#container-choice");
 
 // BTN NEXT
 
@@ -243,8 +243,8 @@ previous.addEventListener("click", (event) => {
 
 // BULLY
 
-const bullysContainer = document.querySelector("#accueil-nav .accueil_nav_list");
-const bullys = document.querySelectorAll("#accueil-nav .accueil_nav_list .accueil_nav_li ")
+const bullysContainer = document.querySelector("#choice-nav .choice_nav_list");
+const bullys = document.querySelectorAll("#choice-nav .choice_nav_list .choice_nav_li ")
 
 for (let i = 0; i < bullys.length; i++) {
 

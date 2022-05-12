@@ -6,14 +6,14 @@
 // .......... COMPONENTS .........//
 
 
-.accueil_nav{
+.choice_nav{
     @include grid-position (1 / span 12, 11 / span 1);
     
-    .accueil_nav_list{
+    .choice_nav_list{
         @include flex ();
         gap: 1rem;
 
-        .accueil_nav_li {
+        .choice_nav_li {
 
             @include flex ();
             @include body (0.5rem, 0.5rem);

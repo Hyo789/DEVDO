@@ -38,7 +38,7 @@
 
 .header_nav.nav-mobile {
     position: absolute; top: 0; right: 0; bottom: 0; z-index: 100;
-    justify-content: flex-start;
+    @include flex ($justify:flex-start);
     flex-direction: column;
     @include border (none,$radius:0.5rem 0 0 0.5rem);
     max-width: 75%;
